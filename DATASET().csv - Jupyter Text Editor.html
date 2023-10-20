@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://localhost:8888/edit/DATASET().csv -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>DATASET().csv - Jupyter Text Editor</title>
+    <link id="favicon" rel="shortcut icon" type="image/x-icon" href="http://localhost:8888/static/base/images/favicon-file.ico?v=f9f0a782d7d67b3a57bf7dce251d771b405c7890604576ec8b9a621a39d7670f6b43ffabef1e566f1cd741ee302e15977d9e1cf60bbacebafe75787b9916415c">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./DATASET().csv - Jupyter Text Editor_files/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="./DATASET().csv - Jupyter Text Editor_files/jquery.typeahead.min.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+<link rel="stylesheet" href="./DATASET().csv - Jupyter Text Editor_files/codemirror.css">
+<link rel="stylesheet" href="./DATASET().csv - Jupyter Text Editor_files/dialog.css">
+
+    <link rel="stylesheet" href="./DATASET().csv - Jupyter Text Editor_files/style.min.css" type="text/css">
+    
+
+    <link rel="stylesheet" href="./DATASET().csv - Jupyter Text Editor_files/custom.css" type="text/css">
+    <script src="./DATASET().csv - Jupyter Text Editor_files/promise.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./DATASET().csv - Jupyter Text Editor_files/react.production.min.js" type="text/javascript"></script>
+    <script src="./DATASET().csv - Jupyter Text Editor_files/react-dom.production.min.js" type="text/javascript"></script>
+    <script src="./DATASET().csv - Jupyter Text Editor_files/index.js" type="text/javascript"></script>
+    <script src="./DATASET().csv - Jupyter Text Editor_files/require.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      require.config({
+          
+          urlArgs: "v=20231020132449",
+          
+          baseUrl: '/static/',
+          paths: {
+            'auth/js/main': 'auth/js/main.min',
+            custom : '/custom',
+            nbextensions : '/nbextensions',
+            kernelspecs : '/kernelspecs',
+            underscore : 'components/underscore/underscore-min',
+            backbone : 'components/backbone/backbone-min',
+            jed: 'components/jed/jed',
+            jquery: 'components/jquery/jquery.min',
+            json: 'components/requirejs-plugins/src/json',
+            text: 'components/requirejs-text/text',
+            bootstrap: 'components/bootstrap/dist/js/bootstrap.min',
+            bootstraptour: 'components/bootstrap-tour/build/js/bootstrap-tour.min',
+            'jquery-ui': 'components/jquery-ui/dist/jquery-ui.min',
+            moment: 'components/moment/min/moment-with-locales',
+            codemirror: 'components/codemirror',
+            termjs: 'components/xterm.js/xterm',
+            typeahead: 'components/jquery-typeahead/dist/jquery.typeahead.min',
+          },
+          map: { // for backward compatibility
+              "*": {
+                  "jqueryui": "jquery-ui",
+              }
+          },
+          shim: {
+            typeahead: {
+              deps: ["jquery"],
+              exports: "typeahead"
+            },
+            underscore: {
+              exports: '_'
+            },
+            backbone: {
+              deps: ["underscore", "jquery"],
+              exports: "Backbone"
+            },
+            bootstrap: {
+              deps: ["jquery"],
+              exports: "bootstrap"
+            },
+            bootstraptour: {
+              deps: ["bootstrap"],
+              exports: "Tour"
+            },
+            "jquery-ui": {
+              deps: ["jquery"],
+              exports: "$"
+            }
+          },
+          waitSeconds: 30,
+      });
+
+      require.config({
+          map: {
+              '*':{
+                'contents': 'services/contents',
+              }
+          }
+      });
+
+      // error-catching custom.js shim.
+      define("custom", function (require, exports, module) {
+          try {
+              var custom = require('custom/custom');
+              console.debug('loaded custom.js');
+              return custom;
+          } catch (e) {
+              console.error("error loading custom.js", e);
+              return {};
+          }
+      })
+
+      // error-catching custom-preload.js shim.
+      define("custom-preload", function (require, exports, module) {
+          try {
+              var custom = require('custom/custom-preload');
+              console.debug('loaded custom-preload.js');
+              return custom;
+          } catch (e) {
+              console.error("error loading custom-preload.js", e);
+              return {};
+          }
+      })
+
+    document.nbjs_translations = {"domain": "nbjs", "locale_data": {"nbjs": {"": {"domain": "nbjs"}}}};
+    document.documentElement.lang = navigator.language.toLowerCase();
+    </script>
+
+    
+    
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/contents" src="./DATASET().csv - Jupyter Text Editor_files/contents.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="custom/custom-preload" src="./DATASET().csv - Jupyter Text Editor_files/custom-preload.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="custom/custom" src="./DATASET().csv - Jupyter Text Editor_files/custom.js"></script></head>
+
+<body class="edit_app " data-base-url="/" data-file-path="DATASET%28%29.csv" data-jupyter-api-token="ba4ed35766cb69273f877e62b066405191bbecb715c34972" dir="ltr">
+
+<noscript>
+    <div id='noscript'>
+      Jupyter Notebook requires JavaScript.<br>
+      Please enable it to proceed. 
+  </div>
+</noscript>
+
+<div id="header" role="navigation" aria-label="Top Menu" style="display: block;">
+  <div id="newsId" style="display: none">
+    
+    <div class="alert alert-info" role="alert">
+      <div style="display: flex">
+        <div>
+          <span class="label label-warning">UPDATE</span>
+          Read <a href="https://jupyter-notebook.readthedocs.io/en/latest/migrate_to_notebook7.html" style="text-decoration: underline;" target="_blank">the migration plan</a> to Notebook 7 to learn about the new features and the actions to take if you are using extensions
+          -
+          Please note that updating to Notebook 7 might break some of your extensions.
+        </div>
+        <div style="margin-left: auto;">
+          <a href="http://localhost:8888/edit/DATASET().csv" onclick="alert(&#39;This message will not be shown anymore.&#39;); return false;">
+            <button type="button" class="btn btn-default btn-xs" id="dontShowId">
+              Don't show anymore
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div id="header-container" class="container">
+  <div id="ipython_notebook" class="nav navbar-brand"><a href="http://localhost:8888/tree?token=ba4ed35766cb69273f877e62b066405191bbecb715c34972" title="dashboard">
+      <img src="./DATASET().csv - Jupyter Text Editor_files/logo.png" alt="Jupyter Notebook">
+  </a></div>
+
+  
+
+<span id="save_widget" class="pull-left save_widget">
+    <span class="filename">DATASET().csv</span>
+    <div class="dirty-indicator-clean" title="No changes to save"></div><span class="last_modified" title="Mon, Sep 25, 2023 6:08 PM">09/25/2023</span>
+</span>
+
+
+  
+
+  
+  
+  
+  
+
+    <span id="login_widget">
+      
+        <button id="logout" class="btn btn-sm navbar-btn">Logout</button>
+      
+    </span>
+
+  
+
+  
+  
+  </div>
+  <div class="header-bar"></div>
+
+  
+
+<div id="menubar-container" class="container">
+  <div id="menubar">
+    <div id="menus" class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+          <p class="navbar-text indicator_area">
+          <span id="current-mode">current mode</span>
+          </p>
+        <button type="button" class="btn btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <i class="fa fa-bars"></i>
+          <span class="navbar-text">Menu</span>
+        </button>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="notification_area"><div id="notification_save" class="notification_widget btn btn-xs navbar-btn" style="display: none;"><span></span></div></li>
+        </ul>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="http://localhost:8888/edit/DATASET().csv#" class="dropdown-toggle" data-toggle="dropdown">File</a>
+              <ul id="file-menu" class="dropdown-menu">
+                <li id="new-file"><a href="http://localhost:8888/edit/DATASET().csv#">New</a></li>
+                <li id="save-file"><a href="http://localhost:8888/edit/DATASET().csv#">Save</a></li>
+                <li id="rename-file"><a href="http://localhost:8888/edit/DATASET().csv#">Rename</a></li>
+                <li id="download-file"><a href="http://localhost:8888/edit/DATASET().csv#">Download</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="http://localhost:8888/edit/DATASET().csv#" class="dropdown-toggle" data-toggle="dropdown">Edit</a>
+              <ul id="edit-menu" class="dropdown-menu">
+                <li id="menu-find"><a href="http://localhost:8888/edit/DATASET().csv#">Find</a></li>
+                <li id="menu-replace"><a href="http://localhost:8888/edit/DATASET().csv#">Find &amp; Replace</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Key Map</li>
+                <li id="menu-keymap-default" class="selected-keymap"><a href="http://localhost:8888/edit/DATASET().csv#">Default<i class="fa"></i></a></li>
+                <li id="menu-keymap-sublime"><a href="http://localhost:8888/edit/DATASET().csv#">Sublime Text<i class="fa"></i></a></li>
+                <li id="menu-keymap-vim"><a href="http://localhost:8888/edit/DATASET().csv#">Vim<i class="fa"></i></a></li>
+                <li id="menu-keymap-emacs"><a href="http://localhost:8888/edit/DATASET().csv#">emacs<i class="fa"></i></a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="http://localhost:8888/edit/DATASET().csv#" class="dropdown-toggle" data-toggle="dropdown">View</a>
+              <ul id="view-menu" class="dropdown-menu">
+              <li id="toggle_header" title="Show/Hide the logo and notebook title (above menu bar)">
+              <a href="http://localhost:8888/edit/DATASET().csv#">Toggle Header</a></li>
+              <li id="menu-line-numbers"><a href="http://localhost:8888/edit/DATASET().csv#">Toggle Line Numbers</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="http://localhost:8888/edit/DATASET().csv#" class="dropdown-toggle" data-toggle="dropdown">Language</a>
+              <ul id="mode-menu" class="dropdown-menu">
+              <li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to APL">APL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to PGP">PGP</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to ASN.1">ASN.1</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Asterisk">Asterisk</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Brainfuck">Brainfuck</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to C">C</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to C++">C++</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Cobol">Cobol</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to C#">C#</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Clojure">Clojure</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to ClojureScript">ClojureScript</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Closure Stylesheets (GSS)">Closure Stylesheets (GSS)</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to CMake">CMake</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to CoffeeScript">CoffeeScript</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Common Lisp">Common Lisp</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Cypher">Cypher</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Cython">Cython</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Crystal">Crystal</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to CSS">CSS</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to CQL">CQL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to D">D</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Dart">Dart</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to diff">diff</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Django">Django</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Dockerfile">Dockerfile</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to DTD">DTD</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Dylan">Dylan</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to EBNF">EBNF</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to ECL">ECL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to edn">edn</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Eiffel">Eiffel</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Elm">Elm</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Embedded Javascript">Embedded Javascript</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Embedded Ruby">Embedded Ruby</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Erlang">Erlang</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Esper">Esper</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Factor">Factor</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to FCL">FCL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Forth">Forth</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Fortran">Fortran</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to F#">F#</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Gas">Gas</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Gherkin">Gherkin</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to GitHub Flavored Markdown">GitHub Flavored Markdown</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Go">Go</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Groovy">Groovy</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to HAML">HAML</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Haskell">Haskell</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Haskell (Literate)">Haskell (Literate)</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Haxe">Haxe</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to HXML">HXML</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to ASP.NET">ASP.NET</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to HTML">HTML</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to HTTP">HTTP</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to IDL">IDL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Pug">Pug</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Java">Java</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Java Server Pages">Java Server Pages</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to JavaScript">JavaScript</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to JSON">JSON</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to JSON-LD">JSON-LD</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to JSX">JSX</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Jinja2">Jinja2</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Julia">Julia</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Kotlin">Kotlin</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to LESS">LESS</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to LiveScript">LiveScript</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Lua">Lua</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Markdown">Markdown</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to mIRC">mIRC</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to MariaDB SQL">MariaDB SQL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Mathematica">Mathematica</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Modelica">Modelica</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to MUMPS">MUMPS</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to MS SQL">MS SQL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to mbox">mbox</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to MySQL">MySQL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Nginx">Nginx</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to NSIS">NSIS</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to NTriples">NTriples</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Objective-C">Objective-C</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Objective-C++">Objective-C++</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to OCaml">OCaml</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Octave">Octave</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Oz">Oz</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Pascal">Pascal</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to PEG.js">PEG.js</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Perl">Perl</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to PHP">PHP</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Pig">Pig</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Plain Text">Plain Text</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to PLSQL">PLSQL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to PostgreSQL">PostgreSQL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to PowerShell">PowerShell</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Properties files">Properties files</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to ProtoBuf">ProtoBuf</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Python">Python</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Puppet">Puppet</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Q">Q</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to R">R</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to reStructuredText">reStructuredText</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to RPM Changes">RPM Changes</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to RPM Spec">RPM Spec</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Ruby">Ruby</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Rust">Rust</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to SAS">SAS</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Sass">Sass</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Scala">Scala</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Scheme">Scheme</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to SCSS">SCSS</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Shell">Shell</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Sieve">Sieve</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Slim">Slim</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Smalltalk">Smalltalk</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Smarty">Smarty</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Solr">Solr</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to SML">SML</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Soy">Soy</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to SPARQL">SPARQL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Spreadsheet">Spreadsheet</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to SQL">SQL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to SQLite">SQLite</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Squirrel">Squirrel</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Stylus">Stylus</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Swift">Swift</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to sTeX">sTeX</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to LaTeX">LaTeX</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to SystemVerilog">SystemVerilog</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Tcl">Tcl</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Textile">Textile</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to TiddlyWiki">TiddlyWiki</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Tiki wiki">Tiki wiki</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to TOML">TOML</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Tornado">Tornado</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to troff">troff</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to TTCN">TTCN</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to TTCN_CFG">TTCN_CFG</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Turtle">Turtle</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to TypeScript">TypeScript</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to TypeScript-JSX">TypeScript-JSX</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Twig">Twig</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Web IDL">Web IDL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to VB.NET">VB.NET</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to VBScript">VBScript</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Velocity">Velocity</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Verilog">Verilog</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to VHDL">VHDL</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Vue.js Component">Vue.js Component</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to XML">XML</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to XQuery">XQuery</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Yacas">Yacas</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to YAML">YAML</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to Z80">Z80</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to mscgen">mscgen</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to xu">xu</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to msgenny">msgenny</a></li><li><a href="http://localhost:8888/edit/DATASET().csv#" title="Set language to WebAssembly">WebAssembly</a></li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lower-header-bar"></div>
+
+
+</div>
+
+<div id="site" style="display: block; height: 663.43px;">
+
+
+<div id="texteditor-backdrop">
+<div id="texteditor-container" class="container"><div class="CodeMirror cm-s-ipython CodeMirror-wrap" style="height: 623.43px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5.59375px; left: 68px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="width: 18px; pointer-events: none; display: block; bottom: 0px;"><div style="min-width: 1px; height: 3.34158e+07px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 64px; margin-bottom: 0px; border-right-width: 50px; min-height: 3.34158e+07px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>692705</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 17px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Destination Port, Flow Duration, Total Fwd Packets, Total Backward Packets,Total Length of Fwd Packets, Total Length of Bwd Packets, Fwd Packet Length Max, Fwd Packet Length Min, Fwd Packet Length Mean, Fwd Packet Length Std,Bwd Packet Length Max, Bwd Packet Length Min, Bwd Packet Length Mean, Bwd Packet Length Std,Flow Bytes/s, Flow Packets/s, Flow IAT Mean, Flow IAT Std, Flow IAT Max, Flow IAT Min,Fwd IAT Total, Fwd IAT Mean, Fwd IAT Std, Fwd IAT Max, Fwd IAT Min,Bwd IAT Total, Bwd IAT Mean, Bwd IAT Std, Bwd IAT Max, Bwd IAT Min,Fwd PSH Flags, Bwd PSH Flags, Fwd URG Flags, Bwd URG Flags, Fwd Header Length, Bwd Header Length,Fwd Packets/s, Bwd Packets/s, Min Packet Length, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance,FIN Flag Count, SYN Flag Count, RST Flag Count, PSH Flag Count, ACK Flag Count, URG Flag Count, CWE Flag Count, ECE Flag Count, Down/Up Ratio, Average Packet Size, Avg Fwd Segment Size, Avg Bwd Segment Size, Fwd Header Length,Fwd Avg Bytes/Bulk, Fwd Avg Packets/Bulk, Fwd Avg Bulk Rate, Bwd Avg Bytes/Bulk, Bwd Avg Packets/Bulk,Bwd Avg Bulk Rate,Subflow Fwd Packets, Subflow Fwd Bytes, Subflow Bwd Packets, Subflow Bwd Bytes,Init_Win_bytes_forward, Init_Win_bytes_backward, act_data_pkt_fwd, min_seg_size_forward,Active Mean, Active Std, Active Max, Active Min,Idle Mean, Idle Std, Idle Max, Idle Min, Label</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">80,38308,1,1,6,6,6,6,6,0,6,6,6,0,313.250496,52.208416,38308,0,38308,38308,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,20,26.104208,26.104208,6,6,6,0,0,0,0,0,0,1,1,0,0,1,9,6,6,20,0,0,0,0,0,0,1,6,1,6,255,946,0,20,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">389,479,11,5,172,326,79,0,15.63636364,31.4492376,163,0,65.2,89.27877687,1039665.971,33402.92276,31.93333333,25.51040871,73,0,479,47.9,38.9428356,109,1,401,100.25,101.7361784,237,3,0,0,0,0,368,176,22964.50939,10438.41336,0,163,29.29411765,56.52959922,3195.595588,0,0,0,1,0,0,0,0,0,31.125,15.63636364,65.2,368,0,0,0,0,0,0,11,172,5,326,29200,260,4,32,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">88,1095,10,6,3150,3150,1575,0,315,632.5616351,1575,0,525,813.3265027,5753424.658,14611.87215,73,204.9609719,810,1,1095,121.6666667,298.7461297,915,1,995,199,345.5350923,810,3,0,0,0,0,336,208,9132.420091,5479.452055,0,1575,370.5882353,671.7515406,451250.1324,0,0,0,1,0,0,0,0,0,393.75,315,525,336,0,0,0,0,0,0,10,3150,6,3150,29200,2081,3,32,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">389,15206,17,12,3452,6660,1313,0,203.0588235,425.7784739,3069,0,555,977.4803416,665000.6576,1907.141918,543.0714286,2519.931377,13391,0,15206,950.375,3322.417812,13391,2,15112,1373.818182,4176.449588,13961,3,0,0,0,0,560,388,1117.979745,789.1621728,0,3069,337.0666667,704.6540816,496537.3747,0,0,0,1,0,0,0,0,0,348.6896552,203.0588235,555,560,0,0,0,0,0,0,17,3452,12,6660,29200,0,10,32,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">88,1092,9,6,3150,3152,1575,0,350,694.5097192,1576,0,525.3333333,813.8429005,5771062.271,13736.26374,78,207.000929,794,1,1092,136.5,313.850738,910,1,1015,203,333.2401536,794,3,0,0,0,0,304,208,8241.758242,5494.505495,0,1576,393.875,704.585067,496440.1167,0,0,0,1,0,0,0,0,0,420.1333333,350,525.3333333,304,0,0,0,0,0,0,9,3150,6,3152,29200,2081,2,32,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">389,433,11,4,172,326,79,0,15.63636364,31.4492376,163,0,81.5,94.10809388,1150115.473,34642.03233,30.92857143,27.74461635,74,0,433,43.3,41.79859115,109,0,222,74,126.439709,220,1,0,0,0,0,368,144,25404.15704,9237.875289,0,163,31.125,57.86060836,3347.85,0,0,0,1,0,0,0,0,0,33.2,15.63636364,81.5,368,0,0,0,0,0,0,11,172,4,326,29200,2081,4,32,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">88,1088,9,6,3150,3152,1575,0,350,694.5097192,1576,0,525.3333333,813.8429005,5792279.412,13786.76471,77.71428571,210.3771078,805,2,1088,136,293.8517605,860,3,1014,202.8,342.1347688,805,2,0,0,0,0,304,208,8272.058824,5514.705882,0,1576,393.875,704.585067,496440.1167,0,0,0,1,0,0,0,0,0,420.1333333,350,525.3333333,304,0,0,0,0,0,0,9,3150,6,3152,29200,2081,2,32,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">80,579225,132,150,160,320799,160,0,1.212121212,13.92621248,4344,0,2138.66,831.8348267,554118.0025,486.8574388,2061.298932,12214.52594,94632,0,579225,4421.564885,17683.93123,95158,1,483900,3247.651007,15697.10339,94740,2,0,0,0,0,4232,4808,227.890716,258.9667228,0,4344,1134.130742,1227.920672,1507789.178,0,0,0,1,0,0,0,0,1,1138.152482,1.212121212,2138.66,4232,0,0,0,0,0,0,132,160,150,320799,29200,237,1,32,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">49666,3,2,0,12,0,6,6,6,0,0,0,0,0,4000000,666666.6667,3,0,3,3,3,3,0,3,3,0,0,0,0,0,0,0,0,0,40,0,666666.6667,0,6,6,6,0,0,0,0,0,0,1,1,0,0,0,9,6,0,40,0,0,0,0,0,0,2,12,0,0,253,-1,1,20,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">49413,4,3,0,18,0,6,6,6,0,0,0,0,0,4500000,750000,2,1.414213562,3,1,4,2,1.414213562,3,1,0,0,0,0,0,0,0,0,0,60,0,750000,0,6,6,6,0,0,0,0,0,0,1,0,0,0,0,8,6,0,60,0,0,0,0,0,0,3,18,0,0,2052,-1,2,20,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">88,1080,9,6,3130,3124,1565,0,347.7777778,690.1001336,1562,0,520.6666667,806.6133316,5790740.741,13888.88889,77.14285714,212.1145761,811,1,1080,135,308.0987782,894,1,993,198.6,345.9498519,811,3,0,0,0,0,304,208,8333.333333,5555.555556,0,1565,390.875,699.2188856,488907.05,0,0,0,1,0,0,0,0,0,416.9333333,347.7777778,520.6666667,304,0,0,0,0,0,0,9,3130,6,3124,29200,260,2,32,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">389,5008522,39,26,5996,10284,403,0,153.7435897,139.3017773,1173,126,395.5384615,344.6042636,3250.459916,12.9778805,78258.15625,387630.6852,2673701,3,5008522,131803.2105,498594.8965,2673701,3,3570045,142801.8,559237.1266,2715645,3,1,0,0,0,1248,832,7.7867283,5.1911522,0,1173,249.5151515,266.6626934,71108.99207,0,1,0,0,1,0,0,0,0,253.3538462,153.7435897,395.5384615,1248,0,0,0,0,0,0,39,5996,26,10284,367,2078,25,32,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">3268,4955405,33,24,4990,5060,403,0,151.2121212,120.1469823,242,72,210.8333333,63.43477764,2028.088522,11.50259161,88489.375,415887.6335,2716857,1,4955405,154856.4063,544298.365,2716857,1,3520965,153085.4348,583284.1464,2717127,48,1,0,0,0,1056,768,6.659395145,4.843196469,0,403,180.2241379,107.1457514,11480.21204,0,1,0,0,1,0,0,0,0,183.3859649,151.2121212,210.8333333,1056,0,0,0,0,0,0,33,4990,24,5060,299,2077,23,32,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">443,274441,12,14,5763,16108,3425,0,480.25,1016.589944,3121,0,1150.571429,863.040307,79692.90303,94.73803113,10977.64,19256.03424,52399,14,274427,24947.90909,30158.77837,87669,51,228316,17562.76923,28235.11155,75974,48,0,0,0,0,252,292,43.72524513,51.01278599,0,3425,810.037037,973.4094119,947525.8832,0,0,0,1,0,0,0,0,1,841.1923077,480.25,1150.571429,252,0,0,0,0,0,0,12,5763,14,16108,8192,256,11,20,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">443,4,2,0,91,0,85,6,45.5,55.86143571,0,0,0,0,22800000,500000,4,0,4,4,4,4,0,4,4,0,0,0,0,0,1,0,0,0,40,0,500000,0,6,85,58.66666667,45.61067127,2080.333333,0,1,0,0,1,0,0,0,0,88,45.5,0,40,0,0,0,0,0,0,2,91,0,0,256,-1,1,20,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">49666,24367839,11,6,920,912,224,0,83.63636364,110.1219985,328,0,152,147.8593927,75.1810614,0.697640854,1522989.938,6037953.463,24200000,1,24400000,2436783.9,7634615.282,24200000,1,606,121.2,138.2378385,345,3,0,0,0,0,244,144,0.45141467,0.246226184,0,328,101.7777778,123.5963809,15276.06536,0,0,0,1,0,0,0,0,0,107.7647059,83.63636364,152,244,0,0,0,0,0,0,11,920,6,912,8192,2052,9,20,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">135,24368732,11,6,686,560,168,0,62.36363636,80.65143858,172,0,93.33333333,77.75517132,51.13109701,0.697615288,1523045.75,6040744.066,24200000,1,24400000,2436873.2,7638281.342,24200000,1,511,102.2,96.78429625,209,1,0,0,0,0,244,144,0.451398128,0.246217161,0,172,69.22222222,78.24287643,6121.947712,0,0,0,1,0,0,0,0,0,73.29411765,62.36363636,93.33333333,244,0,0,0,0,0,0,11,686,6,560,8192,2052,9,20,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">49666,47,1,3,6,18,6,6,6,0,6,6,6,0,510638.2979,85106.38298,15.66666667,22.81081615,42,2,0,0,0,0,0,5,2.5,0.707106781,3,2,0,0,0,0,20,60,21276.59574,63829.78723,6,6,6,0,0,0,0,0,0,1,1,0,0,3,7.5,6,6,20,0,0,0,0,0,0,1,6,3,18,16311,2052,0,20,0,0,0,0,0,0,0,0,BENIGN</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -64px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 51px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">135,60,1,3,6,18,6,6,6,0,6,6,6,0,400000,66666.66667,20,24.75883681,48,1,0,0,0,0,0,49,24.5,33.23401872,48,1,0,0,0,0,20,60,16666.66667,50000,6,6,6,0,0,0,0,0,0,1,1,0,0,3,7.5,6,6,20,0,0,0,0,0,0,1,6,3,18,16355,2052,0,20,0,0,0,0,0,0,0,0,BENIGN</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent; top: 3.34158e+07px;"></div><div class="CodeMirror-gutters" style="height: 3.34158e+07px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 63px;"></div></div></div></div></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+    
+
+
+<script src="./DATASET().csv - Jupyter Text Editor_files/main.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+  function _remove_token_from_url() {
+    if (window.location.search.length <= 1) {
+      return;
+    }
+    var search_parameters = window.location.search.slice(1).split('&');
+    for (var i = 0; i < search_parameters.length; i++) {
+      if (search_parameters[i].split('=')[0] === 'token') {
+        // remote token from search parameters
+        search_parameters.splice(i, 1);
+        var new_search = '';
+        if (search_parameters.length) {
+          new_search = '?' + search_parameters.join('&');
+        }
+        var new_url = window.location.origin + 
+                      window.location.pathname + 
+                      new_search + 
+                      window.location.hash;
+        window.history.replaceState({}, "", new_url);
+        return;
+      }
+    }
+  }
+  _remove_token_from_url();
+  sys_info = {"notebook_version": "6.5.4", "notebook_path": "/Users/mdrashidkhan/anaconda3/lib/python3.11/site-packages/notebook", "commit_source": "", "commit_hash": "", "sys_version": "3.11.4 (main, Jul  5 2023, 08:54:11) [Clang 14.0.6 ]", "sys_executable": "/Users/mdrashidkhan/anaconda3/bin/python", "sys_platform": "darwin", "platform": "macOS-14.0-arm64-arm-64bit", "os_name": "posix", "default_encoding": "utf-8"};
+  document.addEventListener('DOMContentLoaded', function () {
+    const newsId = document.querySelector('#newsId');
+    const dontShowId = document.querySelector('#dontShowId');
+    const showNotebookNews = localStorage.getItem('showNotebookNews');
+    dontShowId.addEventListener('click', () => {
+      localStorage.setItem('showNotebookNews', false);
+      newsId.style.display = 'none';
+    });
+    if (!showNotebookNews) newsId.style.display = 'inline';
+  });
+</script>
+
+
+<container id="my-app-container"></container></body></html>
